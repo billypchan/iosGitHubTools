@@ -1,0 +1,1 @@
+rm -rf /Users/bill/Desktop/DerivedData
