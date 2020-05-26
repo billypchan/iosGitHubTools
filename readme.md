@@ -2,7 +2,7 @@
 
 ## Setup
 
-copy the scripts to `/usr/local/bin/`
+run `setup.sh` to copy the scripts to `/usr/local/bin/`
 
 ### swiftLint
 `brew install swiftlint`
