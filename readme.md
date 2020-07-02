@@ -12,8 +12,8 @@ https://github.com/realm/SwiftLint
 ## Usage
 ### release a version of current project
 1. checkout the release branch
-2. prepare the `release_notes.txt` (remember the title is the first line!)
-2. call `$releaseUIProj.sh [version number]`
+2. prepare the `release_notes.txt` (you may cd to /fastlane/metadata/en-US , but remeber ADD THE TITLE at the first line)
+3. call `$releaseUIProj.sh [version number]`
 
 e.g.
 `releaseUIProj.sh 3.61`

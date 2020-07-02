@@ -7,7 +7,7 @@
 
 # #### steps
 # 1. checkout the release branch
-# 2. prepare the `release_notes.txt`
+# 2. prepare the `release_notes.txt` (you may cd to /fastlane/metadata/en-US , but remeber ADD THE TITLE at the first line)
 # 2. call `$releaseUIProj.sh [version number]`
 
 # e.g.
