@@ -1,3 +1,3 @@
 #!/bin/bash
 
-carthage build --no-skip-current && carthage archive
+carthage build --no-skip-current --platform ios && carthage archive
