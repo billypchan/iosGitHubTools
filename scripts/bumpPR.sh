@@ -26,17 +26,16 @@ echo "👊 ceating branch..."
 git branch chore/bump
 git checkout chore/bump
 
-echo "👊 before update Cartfile"
-cat Cartfile
-
 while read p; do
     echo $p
     updateCartfile "$p"
 done <Cartfile
 
 echo "👊 after update Cartfile"
-
 cat Cartfile
+
+###TODO: check private cartfile also
+
 carthage update --no-build
 git add .
 git commit -m"bump components"
