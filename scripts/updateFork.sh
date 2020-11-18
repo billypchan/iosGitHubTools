@@ -4,8 +4,10 @@
 
 echo "add upstream repo: $1"
 
+BRANCH=`git branch --show-current`
+
 git remote add upstream $1
 git fetch upstream
-git checkout master
-git merge upstream/master
+git checkout $BRANCH
+git merge upstream/$BRANCH
 git push
