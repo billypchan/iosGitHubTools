@@ -1,6 +1,9 @@
 #!/bin/bash
 
-UPSTREAM_REPO="apple/swift-protobuf"
+### usage: checkoutReleaseTag.sh [owner/repo]
+###e.g. checkoutReleaseTag.sh apple/swift-protobuf
+
+UPSTREAM_REPO=$1
 
 LATEST_VERSION=`curl --silent "https://api.github.com/repos/$UPSTREAM_REPO/releases/latest" | jq -r .tag_name` || true
 
