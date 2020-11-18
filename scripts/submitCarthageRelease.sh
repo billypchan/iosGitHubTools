@@ -10,7 +10,9 @@ LATEST_VERSION=`curl --silent "https://api.github.com/repos/$UPSTREAM_REPO/relea
 
 SUBMIT_REPO=`git config --get remote.origin.url`
 
-gh release create $LATEST_VERSION SwiftProtobuf.framework.zip  --title "$LATEST_VERSION" --notes "update from upstream" --repo $SUBMIT_REPO
+FRAMEWORK_ZIP=`ls *.framework.zip`
+
+gh release create $LATEST_VERSION $FRAMEWORK_ZIP  --title "$LATEST_VERSION" --notes "update from upstream" --repo $SUBMIT_REPO
 
 
 
