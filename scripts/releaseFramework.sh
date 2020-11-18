@@ -1,0 +1,1 @@
+gh release create 6.0.1_xcode12.3_beta -t "Xcode 12.3 beta" --notes "" ./SwiftProtobuf.framework.zip
