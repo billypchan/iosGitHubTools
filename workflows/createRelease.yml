@@ -7,7 +7,7 @@ jobs:
   create-release:
     runs-on: macos-10.15
     env:
-        UPSTREAM_REPO: microsoft/appcenter-sdk-apple
+        UPSTREAM_REPO: UPSTREAM OF YOUR REPO
 
     steps:
       - name: checkout
@@ -28,6 +28,8 @@ jobs:
           bash <(curl --silent https://raw.githubusercontent.com/billypchan/iosGitHubTools/master/scripts/createCarthageFramwork.sh)
 
       - name: submit release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bash <(curl --silent https://raw.githubusercontent.com/billypchan/iosGitHubTools/master/scripts/submitCarthageRelease.sh) ${{ env.UPSTREAM_REPO }}
         
