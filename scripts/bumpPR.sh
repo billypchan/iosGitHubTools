@@ -42,4 +42,15 @@ git commit -m"bump components"
 git push --set-upstream origin chore/bump
 
 echo "👊 open PR"
-gh pr create --title "chore: bump components" --body "bump for components"
+
+### assign one of KaterinaWire/marcomaddy1982/johnxnguyen/David-Henner/billypchan/typfel as a reviewer
+arr[0]="KaterinaWire"
+arr[1]="marcomaddy1982"
+arr[2]="johnxnguyen"
+arr[3]="David-Henner"
+arr[4]="billypchan"
+arr[5]="typfel"
+rand=$[$RANDOM % ${#arr[@]}]
+
+#gh pr create --reviewer KaterinaWire,marcomaddy1982,johnxnguyen,David-Henner --title "chore: bump components" --body "bump for components"
+gh pr create --reviewer "$rand" --title "chore: bump components" --body "bump for components"

@@ -5,5 +5,6 @@
 
  git checkout develop
  cleanGitBranch.sh
+ git branch -d chore/bump
  git pull
  bash bumpPR.sh
