@@ -1,1 +1,1 @@
-rm -rf /Users/bill/Desktop/DerivedData
+rm -rf ~/Library/Developer/Xcode/DerivedData
