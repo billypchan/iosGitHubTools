@@ -26,8 +26,8 @@ SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
 xcodebuild archive -project "$xcodeproj.xcodeproj" -scheme "$scheme" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath "./$xcodeproj.framework-iphonesimulator.xcarchive" SKIP_INSTALL=NO  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 
-xcodebuild -create-xcframework -framework \
-"./$xcodeproj.framework-iphoneos.xcarchive/Products/Library/Frameworks/$framework.framework" \
+xcodebuild -create-xcframework  \
+-framework "./$xcodeproj.framework-iphoneos.xcarchive/Products/Library/Frameworks/$framework.framework" \
 -framework "./$xcodeproj.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/$framework.framework" \
 -output "$framework.xcframework"
 

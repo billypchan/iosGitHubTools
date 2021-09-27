@@ -1,7 +1,8 @@
 #!/bin/bash
 
 ### usage: checkoutReleaseTag.sh [owner/repo]
-###e.g. checkoutReleaseTag.sh apple/swift-protobuf
+### e.g. checkoutReleaseTag.sh apple/swift-protobuf
+### install: macok: brew install jq
 
 UPSTREAM_REPO=$1
 

@@ -10,7 +10,7 @@ LATEST_VERSION=`curl --silent "https://api.github.com/repos/$UPSTREAM_REPO/relea
 
 SUBMIT_REPO=`git config --get remote.origin.url`
 
-FRAMEWORK_ZIP=`ls *.framework.zip`
+FRAMEWORK_ZIP=`ls *.xcframework.zip`
 
 gh release create $LATEST_VERSION $FRAMEWORK_ZIP  --title "$LATEST_VERSION" --notes "update from upstream" --repo $SUBMIT_REPO
 
