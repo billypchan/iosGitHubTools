@@ -28,7 +28,9 @@ xcodebuild archive -project "$xcodeproj.xcodeproj" -scheme "$scheme" -configurat
 
 xcodebuild -create-xcframework  \
 -framework "./$xcodeproj.framework-iphoneos.xcarchive/Products/Library/Frameworks/$framework.framework" \
+-debug-symbols `pwd`"/$xcodeproj.framework-iphoneos.xcarchive/dSYMs/$framework.framework.dSYM" \
 -framework "./$xcodeproj.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/$framework.framework" \
+-debug-symbols `pwd`"/$xcodeproj.framework-iphonesimulator.xcarchive/dSYMs/$framework.framework.dSYM" \
 -output "$framework.xcframework"
 
 zip -r $framework.xcframework.zip "$framework.xcframework"
